@@ -1,0 +1,172 @@
+.navbar {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #e7e7e7;
+  z-index: 1 !important;
+}
+
+.navbar .right-nav img.profileImg {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  object-fit: fill;
+  cursor: pointer;
+}
+
+.navbar .right-nav .notifications > svg {
+  color: #9a9a9a;
+  font-size: larger;
+}
+
+.navbar .right-nav .notifications {
+  position: relative;
+}
+
+.navbar .right-nav .notifications .status {
+  background-color: transparent;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.3rem;
+  right: -0.1rem;
+}
+
+.navbar .right-nav .notifications .status.active {
+  background-color: var(--main-orange-bg);
+}
+
+.breadcrumb {
+  display: flex;
+}
+
+.breadcrumb-item > span {
+  margin: 0 0.5rem;
+}
+
+.breadcrumb-item {
+  color: #9a9a9a;
+  font-size: 14px;
+  display: flex;
+}
+
+.breadcrumb-item.active {
+  color: var(--main-orange-color);
+  cursor: pointer;
+}
+
+.breadcrumb-item.active:hover {
+  text-decoration: underline;
+}
+
+.profilePopup {
+  background-color: #e7e7e7;
+}
+
+.profilePopup .profilePopup-item > p.active {
+  color: #1d5fad;
+}
+
+.profilePopup .profilePopup-item > p {
+  color: #767676;
+}
+
+.profilePopup .profilePopup-item > svg {
+  font-size: 20px;
+  color: #767676;
+}
+
+.notificationsPopup {
+  position: absolute;
+  top: 2rem;
+  right: -5rem;
+  background: #ffffff;
+  box-shadow: -8px 8px 40px rgba(157, 157, 157, 0.25);
+  border-radius: 20px;
+  min-width: 25rem;
+}
+
+.notificationsPopup .header {
+  padding: 1rem;
+  background: #1d5fad;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.notificationsPopup .header .new {
+  background: #ffffff;
+  border-radius: 10px;
+  color: #1d5fad;
+}
+
+.notificationsPopup .content {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  min-height: 15rem;
+}
+
+.notificationsPopup .content p {
+  margin: 1rem 0;
+  color: #5c5c5c;
+  background: #f7f7f8;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.notifications .content p.notif {
+  font-weight: bold !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.notificationsPopup .bottom {
+  background: #fff;
+  padding: 1rem;
+  border-top: 2px solid #1d5fad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notificationsPopup .bottom p {
+  color: #1d5fad;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+.navbar-toggler {
+  display: none;
+  color: #5c5c5c;
+}
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    display: inline-block;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+
+  .breadcrumb-item {
+    font-size: 10px;
+  }
+
+  .notificationsPopup {
+    min-width: 20rem;
+    right: -2rem;
+  }
+
+  .navbar .right-nav img.profileImg {
+    height: 20px;
+    width: 20px;
+  }
+  .navbar .right-nav .notifications > svg {
+    font-size: medium;
+  }
+}

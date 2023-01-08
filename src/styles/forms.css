@@ -1,0 +1,185 @@
+.form {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.select-input {
+  outline: none !important;
+  border: none !important;
+
+}
+
+.assign-label {
+  text-align: left !important;
+}
+
+.form .full-group {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form .full-group label {
+  text-align: left;
+}
+
+.form .full-group input[type="date"] {
+  margin-bottom: 2rem;
+}
+
+.form .full-group .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.form .full-group .checkbox-container label {
+  margin-left: 1rem;
+}
+
+.form .image-container {
+  margin: 1rem auto 3rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border: 2px solid var(--main-orange-color);
+}
+
+.form .image-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.form .form-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.differentInput {
+  margin-top: 0.2em !important;
+}
+
+.form .form-group textarea {
+  border: 1.5px solid #c6c6c6;
+  border-radius: 7px;
+  padding: 0.4rem 0.5rem;
+  outline: none;
+  margin-top: 0.5rem;
+  resize: none;
+  color: #b7b7b7;
+  width: 100% !important;
+}
+
+.form .form-group label {
+  color: #868585;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.form .form-group:focus-within label {
+  color: var(--main-orange-color);
+}
+
+.form .form-group textarea:focus {
+  border: 2px solid var(--main-orange-color);
+}
+
+.form button[type="submit"] {
+  background: var(--main-orange-bg);
+  border-radius: 8px;
+  padding: 0.5rem 0rem !important;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 2rem 0 !important;
+  width: 100% !important;
+}
+
+.form button[type="submit"]:disabled {
+  background-color: #b7b7b7;
+}
+
+label {
+  color: #868585;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.input-text::placeholder {
+  font-size: 14px;
+  font-weight: bold;
+  color: #bab8b8;
+}
+
+.select-container:focus-within label,
+.input-container:focus-within label {
+  color: var(--main-orange-color) !important;
+}
+
+.select-input>input {
+  border: none !important;
+  outline: none !important;
+}
+
+input:focus {
+  border: 1px solid var(--main-orange-color);
+  outline: none;
+  box-shadow: none;
+}
+
+input.active:invalid {
+  outline: none;
+  border-color: #ad1d1d;
+  --tw-ring-color: #ad1d1d;
+}
+
+.error {
+  color: #ad1d1d;
+  font-size: small;
+}
+
+.edit-placeholder {
+  padding-left: 12px !important;
+}
+
+.edit-placeholder,
+.edit-placeholder::placeholder,
+.edit-select {
+  font-size: 0.9rem;
+}
+
+
+.react-selector {
+  font-size: 11px;
+}
+
+
+@media screen and (min-width: 992px) {
+  .form {
+    width: 70%;
+  }
+
+  .form .form-row {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .form .form-row>.form-group,
+  .form .form-row .form-col {
+    width: 40%;
+  }
+
+  .form .full-group {
+    width: 50%;
+  }
+}

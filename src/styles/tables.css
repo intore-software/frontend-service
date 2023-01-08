@@ -1,0 +1,491 @@
+.table-header .left .table-header-buttons {
+  background: #e5e5e5;
+  border-radius: 15px;
+}
+
+.table-header .left .table-header-buttons .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #868585;
+  margin: 0.8rem;
+}
+
+.table-header .left .table-header-buttons button {
+  padding: 5px 25px;
+  color: #868585 !important;
+  background-color: #e5e5e5 !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+.table-header .left .table-header-buttons button.active {
+  background: var(--main-orange-bg) !important;
+  border-radius: 15px;
+  color: #fff !important;
+}
+
+.table-header .right input,
+.table-header .right select {
+  border: 1px solid #bab8b8;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  width: 150px;
+  height: 35px;
+  padding: 0.1rem 0.4rem;
+  color: #bab8b8;
+}
+
+.table-header .left input {
+  border: 1px solid #bab8b8;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  width: 180px;
+  height: 35px;
+  padding: 0.1rem 0.4rem;
+  color: #bab8b8;
+  background: #eaeaea;
+}
+
+table.table {
+  border-collapse: collapse;
+  min-width: 100%;
+  width: max-content;
+}
+
+.horizontal-scroll::-webkit-scrollbar,
+.table-container::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+.horizontal-scroll::-webkit-scrollbar-track,
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.horizontal-scroll::-webkit-scrollbar-thumb:horizontal,
+.table-container::-webkit-scrollbar-thumb:horizontal {
+  background: #888;
+}
+
+/* Handle on hover */
+.horizontal-scroll::-webkit-scrollbar-thumb:horizontal:hover,
+.table-container::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #555;
+}
+
+table.table th,
+table.table td {
+  text-align: left;
+  padding: 10px 8px;
+  font-size: 13px;
+}
+table.table th.center,
+table.table td.center {
+  text-align: center;
+}
+
+table.table img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+table.table tr:nth-child(even) {
+  background: rgba(122, 115, 110, 0.08);
+  width: 100%;
+  color: #9a9a9a;
+}
+
+table.table tr:nth-child(odd) {
+  background: #f1f5fa;
+  border-radius: 10px;
+  width: 100%;
+  color: #9a9a9a;
+}
+
+table.table tr.blue {
+  background: #f1f5fa;
+}
+
+table.table .space {
+  height: 0.5rem;
+  width: 100%;
+  background-color: #fff;
+}
+table.table th {
+  background: #f1f5fa;
+  color: var(--main-orange-color);
+}
+
+table.table th.red,
+table.table td.red {
+  color: #ad1d1d;
+}
+
+@media screen and (max-width: 992px) {
+  table.table {
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
+.text-gray{ 
+  color: #868585;
+}
+
+.inside-modal-table{
+  border-collapse: collapse;
+  width: 98%;
+}
+
+
+.horizontal-scroll::-webkit-scrollbar,
+.inside-modal-table-container::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+.horizontal-scroll::-webkit-scrollbar-track,
+.inside-modal-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.horizontal-scroll::-webkit-scrollbar-thumb:horizontal,
+.inside-modal-table::-webkit-scrollbar-thumb:horizontal {
+  background: #888;
+}
+
+/* Handle on hover */
+.horizontal-scroll::-webkit-scrollbar-thumb:horizontal:hover,
+.inside-modal-table::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #555;
+}
+
+table.inside-modal-table th,
+table.inside-modal-table td {
+  text-align: left;
+  padding: 10px 8px;
+  font-size: 13px;
+  height: 1em;
+}
+table.inside-modal-table th.center,
+table.inside-modal-table td.center {
+  text-align: center;
+}
+
+table.inside-modal-table img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+table.inside-modal-table tr:nth-child(even) {
+  background: rgba(156, 161, 167, 0.08);
+  width: 100%;
+  color: #9a9a9a;
+}
+
+table.inside-modal-table tr:nth-child(odd) {
+  background: #f1f5fa;
+  border-radius: 10px;
+  width: 100%;
+  color: #9a9a9a;
+}
+
+table.inside-modal-table tr.blue {
+  background: #f1f5fa;
+}
+
+table.inside-modal-table .space {
+  height: 0.5rem;
+  width: 100%;
+  background-color: #fff;
+}
+table.inside-modal-table th {
+  background: #f1f5fa;
+  color: var(--main-orange-color);
+}
+
+table.inside-modal-table th.red,
+table.inside-modal-table td.red {
+  color: #ad1d1d;
+}
+
+@media screen and (max-width: 992px) {
+  table.inside-modal-table {
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
+
+.table-form-separator{
+  width: 0.3em;
+  height:inherit;
+  background: #C4C4C4;
+  border-radius: 8px;
+}
+
+.table-holder
+  .header {
+  background: var(--main-orange-bg);
+  border-radius: 20px
+    20px 0px 0px;
+  padding: 1rem 2rem;
+}
+
+
+.table-holder
+  .content {
+  width: 100%;
+  min-height: 20rem;
+  border-radius: 0px
+    0px 20px 20px;
+}
+
+.table-holder
+  .references {
+  width: 100%;
+  min-height: 32rem;
+  border-radius: 0px
+    0px 20px 20px;
+}
+
+.table-holder {
+  min-width: 70%;
+  min-height: 50%;
+  max-height: 100%;
+  overflow: auto;
+}
+.table-holder.full {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.table-holder::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.table-holder::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.table-holder::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.table-holder.large {
+  min-width: 90%;
+}
+
+.table-holder.danger
+  .header {
+  background-color: #ad1d1d;
+}
+
+.table-holder.small {
+  min-height: 30%;
+}
+
+.table-holder.small
+  .content {
+  min-height: 15rem;
+}
+.table-holder
+  .content
+  form {
+  padding: 1rem 0;
+}
+
+.table-holder.small
+  .content
+  form {
+  margin-left: 20%;
+  padding: 1rem 0;
+}
+
+.table-holder
+  .content
+  form
+  label {
+  color: #868585;
+  transform: rotate(
+    -0.25deg
+  );
+  display: block;
+}
+
+.table-holder
+  .content
+  form
+  textarea {
+  color: #868585;
+  border: 1.30841px
+    solid #c6c6c6;
+  box-sizing: border-box;
+  border-radius: 6.54204px;
+  transform: rotate(
+    -0.25deg
+  );
+  width: 80%;
+  min-height: 8rem;
+  resize: none;
+  outline: none;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.table-holder
+  .content
+  form
+  button {
+  background: var(--main-orange-bg);
+  border-radius: 10px;
+  padding: 0.5rem
+    1.5rem;
+  color: #fff;
+  margin-top: 2rem;
+  margin-left: 25%;
+}
+
+.table-holder.danger
+  .content
+  form
+  button {
+  background: #ad1d1d;
+}
+.trades-info h2 {
+  font-weight: 600;
+  color: #868585;
+}
+.trade-info-description {
+  width: 100%;
+  height: 0.03%;
+  background: #eaeaea;
+}
+
+.bottom-buttons {
+  width: 100%;
+}
+
+.bottom-buttons
+  button {
+  background: var(--main-orange-bg);
+  border-radius: 9.87952px;
+  padding: 7px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+.bottom-buttons
+  button.danger {
+  background: #ad1d1d;
+}
+
+.close-btn {
+  background-color: red;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+
+  .table-holder {
+    min-width: 50%;
+  }
+  .table-holder.large {
+    min-width: 60%;
+  }
+  .table-holder.small {
+    min-width: 40%;
+  }
+  .table-holder
+    .content
+    form
+    .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+  }
+  .table-holder
+    .content
+    form
+    .form-group {
+    width: 40%;
+  }
+
+  .table-holder
+  .content
+  form
+  .form-group-full{
+    text-align: left;
+    width: 100%;
+  }
+
+  .table-holder
+    .content
+    form
+    button.center {
+    margin-left: 45%;
+  }
+
+  .bottom-buttons {
+    width: 80%;
+    margin-left: 20%;
+  }
+}
+
+.bg-of-button {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100% !important;
+}
+.bg-of-button
+  button {
+  width: 180px;
+  height: 39px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  color: #868585;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.bg-of-button
+  .active {
+  background: var(--main-orange-bg);
+  color: #fff;
+}
+
+.bg-of-button
+  .button-container {
+  background: #e5e5e5;
+  border-radius: 5px;
+  width: max-content;
+  padding: 9.5px 0 !important;
+}
+.pagination__margin {
+  margin-top: -60px;
+  margin-bottom: 30px;
+}
+
+table tr th, table tr td{
+  font-size: 13px !important;
+}
