@@ -19,6 +19,17 @@ export default function systemOperatorMembersReducer(state = initialState, actio
             }
         case actions.GET_MEMBERS_FAILURE:
             return { ...state, loading: false, hasErrors: true, sending: false };
+        case actions.SEND_MEMBERS:
+            return { ...state, sending: true };
+        case actions.SEND_MEMBERS_SUCCESS:
+            return {
+                members: action.payload,
+                loading: false,
+                hasErrors: false,
+                sending: false,
+            };
+        case actions.SEND_MEMBERS_FAILURE:
+            return { ...state, loading: false, hasErrors: true, sending: false };
         default:
             return state;
     }

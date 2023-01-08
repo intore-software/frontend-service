@@ -50,7 +50,7 @@ const Login = () => {
       <div className="w-full max-w-lg space-y-2 bg-white rounded-lg py-4">
         {/* logo */}
         <div className="logo-container">
-          <img src="" alt="Logo" className="m-auto logo" />
+          <img src={Logo} alt="Logo" className="m-auto logo" />
         </div>
         <div className="text-center font-bold primary-color uppercase text-2xl header-reg px-10">
           login

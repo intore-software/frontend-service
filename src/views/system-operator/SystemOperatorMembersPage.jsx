@@ -7,6 +7,8 @@ import { useHistory } from "react-router-dom";
 import "../../styles/tables.css";
 import { fetchMembers } from "../../actions/system-operator/SystemOperatorMembersAction";
 import SystemOperatorMembersTable from "../../components/system-operator/members/SystemOperatorMembersTable";
+import SystemOperatorAddNewMember from "../../components/system-operator/members/SystemOperatorAddNewMember";
+import { postMember} from "../../actions/system-operator/SystemOperatorMembersAction";
 import { decrypt } from "../../services/crypto";
 
 const defaultModalStatus = {
@@ -48,6 +50,10 @@ const SystemOperatorMembers = ({ dispatch, loading, members, sending }) => {
     }
   };
 
+  const submitMembers = (dataTOSubmit) => {
+    dispatch(postMember(dataTOSubmit, history));
+  };
+
   return (
     <>
       <SidebarPage
@@ -58,7 +64,6 @@ const SystemOperatorMembers = ({ dispatch, loading, members, sending }) => {
         title="Members"
         classes="p-4 md:p-8"
       >
-
         <SystemOperatorMembersTable
           openModal={openModal}
           closeModal={closeModal}
@@ -73,6 +78,29 @@ const SystemOperatorMembers = ({ dispatch, loading, members, sending }) => {
           sending={sending}
           role={profile?.role}
         ></SystemOperatorMembersTable>
+        {profile?.role === "SYSTEM_OPERATOR" && (
+          <div className="flex w-full justify-center">
+            <div className="bg-white flex items-center justify-center w-full">
+              <button
+                className="button-link"
+                onClick={() =>
+                  openModal(
+                    <SystemOperatorAddNewMember
+                      isEdit={false}
+                      openModal={openModal}
+                      closeModal={closeModal}
+                      submit={submitMembers}
+                      sending={sending}
+                      dispatch={dispatch}
+                    ></SystemOperatorAddNewMember>
+                  )
+                }
+              >
+                Register Member
+              </button>
+            </div>
+          </div>
+        )}
       </SidebarPage>
       {modalShown.shown && (
         <ModalContainer>{modalShown.component}</ModalContainer>

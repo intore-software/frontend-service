@@ -3,52 +3,50 @@ import authHeader from '../../services/auth-header';
 import { toast } from 'react-toastify'
 
 // Create Redux action types
-export const GET_MEMBERS = "GET_MEMBERS";
-export const GET_MEMBERS_SUCCESS = "GET_MEMBERS_SUCCESS";
-export const GET_MEMBERS_FAILURE = "GET_MEMBERS_FAILURE";
-export const SEND_MEMBERS = "SEND_MEMBERS";
-export const SEND_MEMBERS_SUCCESS = "SEND_MEMBERS_SUCCESS";
-export const SEND_MEMBERS_FAILURE = "SEND_MEMBERS_FAILURE";
+export const GET_AMASIBO = "GET_AMASIBO";
+export const GET_AMASIBO_SUCCESS = "GET_AMASIBO_SUCCESS";
+export const GET_AMASIBO_FAILURE = "GET_AMASIBO_FAILURE";
+export const SEND_AMASIBO = "SEND_AMASIBO";
+export const SEND_AMASIBO_SUCCESS = "SEND_AMASIBO_SUCCESS";
+export const SEND_AMASIBO_FAILURE = "SEND_AMASIBO_FAILURE";
 
 const ENDPOINT = import.meta.env.VITE_REACT_APP_BASE_API_URL;
 
 
 // Create Redux action creators that return an action
 export const getMembers = () => ({
-    type: GET_MEMBERS,
+    type: GET_AMASIBO,
 });
 
 export const getMembersSuccess = (members) => ({
-    type: GET_MEMBERS_SUCCESS,
+    type: GET_AMASIBO_SUCCESS,
     payload: members,
 });
 
 export const getMembersFailure = () => ({
-    type: GET_MEMBERS_FAILURE,
+    type: GET_AMASIBO_FAILURE,
 });
 
 export const sendMembers = () => ({
-    type: SEND_MEMBERS,
+    type: SEND_AMASIBO,
 });
 
 export const sendMembersSuccess = () => ({
-    type: SEND_MEMBERS_SUCCESS,
+    type: SEND_AMASIBO_SUCCESS,
 });
 
 export const sendMembersFailure = () => ({
-    type: SEND_MEMBERS_FAILURE,
+    type: SEND_AMASIBO_FAILURE,
 });
 
 
 
-export function fetchMembers(page = 0, searchValues = { name: null }) {
+export function fetchAmasibo(page = 0,villageId=0) {
     let limit = 5;
     return async (dispatch, getState) => {
         dispatch(getMembers());
         try {
-            const url = `/members/system-operator-search?limit=${limit}&page=${page}`;
-            const FilterUrl = `/members/system-operator-search?&name=${searchValues.name}&limit=${limit}&page=${page}`;
-
+            const url = `/location-address/amasibo/by-village/${villageId}?limit=${limit}&page=${page}`;
 
             let useSearch =
                 searchValues.name
@@ -70,7 +68,7 @@ export function fetchMembers(page = 0, searchValues = { name: null }) {
 
 async function reloadMembers(dispatch, getState) {
     let currentPage = getState().mayorMembers.number;
-    await dispatch(fetchMembers(currentPage));
+    await dispatch(fetchAmasibo(currentPage));
 }
 export function dispatchReloadMembers() {
     return async (dispatch, getState) => {

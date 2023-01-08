@@ -46,6 +46,27 @@ export async function getDistricts(id) {
 }
 
 
+export async function getAmasibo(villageId) {
+  let villageOptions = [];
+  let i = 0;
+  await axios
+    .get(`${BASE_URL}/location-address/amasibo/by-village/${villageId}`)
+    .then((response) => {
+      for (const village of response.data.content) {
+        const data = {
+          value: village.id,
+          label: village.name,
+        };
+        villageOptions.push(data);
+        i++;
+      }
+      return villageOptions;
+    })
+    .catch((error) => {});
+  return villageOptions;
+}
+
+
 export async function getAllSectorsByDistrict(id) {
   let sectorOptions = [];
   let i = 0;
